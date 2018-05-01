@@ -1,0 +1,68 @@
+.cube {
+	position: fixed;
+	left: 50%;
+	top: 12px;
+}
+
+.cube.one {
+	top: 200px;
+	left: 50%;
+	margin-left: -200px;
+}
+
+.topFace div {
+	padding: 0px;
+	width: 180px;
+	height: 180px;
+	border: solid 1px #ddd;
+}
+
+.cube img {
+	width: 180px;
+	height: 180px;
+}
+
+.rightFace,
+.leftFace,
+.topFace {
+	position: absolute;
+}
+
+
+.leftFace {
+	-webkit-transform: skew(0deg, 30deg);
+	-moz-transform: skew(0deg, 30deg);
+	background-color: #ccc;
+}
+
+.rightFace {
+	-webkit-transform: skew(0deg, -30deg);
+	-moz-transform: skew(0deg, -30deg);
+	background-color: #ddd;
+	left: 180px;
+}
+
+.topFace div {
+	-webkit-transform: skew(0deg, -30deg) scale(1, 1.16);
+	-moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+	background-color: #eee;
+	font-size: 0.862em;
+}
+
+.topFace {
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	top: -142px;
+	left: 89px;
+}
+
+
+/* Optional WebKit Animations */
+
+.cube {
+	-webkit-transition: -webkit-transform 1s linear;
+}
+
+.cube:hover {
+	-webkit-transform: translate(202px, 115px);
+}
